@@ -88,7 +88,7 @@ export default function HowItWorks() {
             transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
           >
             <img
-              src="https://images.unsplash.com/photo-1611365892117-00ac5ef43c90?w=800&q=80"
+              src="https://images.unsplash.com/photo-1668097613572-40b7c11c8727?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Solar installation"
             />
           </motion.div>

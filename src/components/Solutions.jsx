@@ -6,17 +6,17 @@ const solutions = [
   {
     title: 'Residential Solar',
     desc: 'Efficient solar systems designed to power modern homes with clean renewable energy.',
-    img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1762958266463-6af778b56beb?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   },
   {
     title: 'Commercial Solar',
     desc: 'Optimized solar solutions that help businesses reduce operational electricity costs.',
-    img: 'https://images.unsplash.com/photo-1497440001374-f26997328c1b?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1637417494521-78b4d1d33029?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   },
   {
     title: 'Industrial Solar',
     desc: 'Large-scale solar installations engineered to support factories and industrial facilities.',
-    img: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1611365892117-00ac5ef43c90?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   },
 ]
 
