@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { motion, useMotionValue, useTransform, animate, useInView } from 'framer-motion'
+import { Zap, BatteryMedium, Leaf } from 'lucide-react'
 import styles from './Hero.module.css'
 
 const Counter = ({ from, to }) => {
@@ -31,10 +32,9 @@ const fadeUp = (delay = 0) => ({
 export default function Hero() {
   return (
     <section id="hero" className={styles.hero}>
-      {/* Optimized Background */}
       <div className={styles.bg}>
         <img
-          src="https://images.unsplash.com/photo-1629726797843-618688139f5a?q=80&w=3271&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src="https://images.unsplash.com/photo-1629726797843-618688139f5a?q=80&w=3271&auto=format&fit=crop"
           alt="Solar panels"
           loading="eager"
         />
@@ -42,7 +42,6 @@ export default function Hero() {
       </div>
 
       <div className={styles.mainContainer}>
-        {/* Konten Utama */}
         <div className={styles.contentWrapper}>
           <div className={styles.textContent}>
             <motion.h1 className={styles.title} {...fadeUp(0.1)}>
@@ -62,13 +61,9 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Bar Bagian Bawah */}
+        {/* Tetap kesamping dengan Flexbox */}
         <div className={styles.bottomBar}>
-          <motion.div
-            className={styles.clients}
-            {...fadeUp(0.6)}
-            style={{ willChange: "transform, opacity" }}
-          >
+          <motion.div className={styles.clients} {...fadeUp(0.6)}>
             <div className={styles.avatars}>
               {[11, 32, 47].map((id) => (
                 <img
@@ -80,24 +75,22 @@ export default function Hero() {
               ))}
             </div>
             <div className={styles.clientText}>
+              {/* Teks jumlah klien putih */}
               <span className={styles.count}><Counter from={0} to={1200} />+</span>
-              <span className={styles.label}>Happy clients worldwide</span>
+              <span className={styles.label}>Happy clients</span>
             </div>
           </motion.div>
 
-          <motion.div
-            className={styles.badges}
-            {...fadeUp(0.7)}
-            style={{ willChange: "transform, opacity" }}
-          >
+          <motion.div className={styles.badges} {...fadeUp(0.7)}>
             {[
-              { icon: '⚡', label: 'Clean Energy' },
-              { icon: '🔋', label: 'Smart Power' },
-              { icon: '🌿', label: 'Eco-Friendly' },
+              { icon: <Zap size={18} strokeWidth={2.5} />, label: 'Clean Energy' },
+              { icon: <BatteryMedium size={18} strokeWidth={2.5} />, label: 'Smart Power' },
+              { icon: <Leaf size={18} strokeWidth={2.5} />, label: 'Eco-Friendly' },
             ].map((b) => (
               <div key={b.label} className={styles.badge}>
                 <span className={styles.badgeIcon}>{b.icon}</span>
-                <span>{b.label}</span>
+                {/* Pastikan menggunakan class badgeLabel di sini */}
+                <span className={styles.badgeLabel}>{b.label}</span>
               </div>
             ))}
           </motion.div>

@@ -142,31 +142,62 @@
 
 .label {
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.5);
-  margin-top: 4px;
+  color: rgba(255, 255, 255, 0.8);
+  /* Putih sedikit soft agar tidak terlalu kontras */
 }
 
 /* --- Badges & Blur Fix --- */
+.badgeIcon {
+  color: var(--green);
+  display: flex;
+  align-items: center;
+}
+
 .badges {
   display: flex;
-  gap: 0.75rem;
+  flex-direction: row;
+  /* Ikon-ikon kecil tetap berjajar */
+  gap: 16px;
 }
 
 .badge {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.6rem 1.2rem;
+  gap: 8px;
   background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(10px);
+  padding: 8px 16px;
+  border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 100px;
-  color: #fff;
-  font-size: 0.875rem;
-  font-weight: 500;
-  transform: translateZ(0);
-  /* GPU Acceleration */
+  white-space: nowrap;
+  /* Mencegah teks turun ke bawah */
+}
+
+.badgeLabel {
+  color: #ffffff !important;
+  /* Paksa menjadi putih solid */
+  font-size: 0.9rem;
+  font-weight: 600;
+  /* Sedikit lebih tebal agar kontras di atas glassmorphism */
+  letter-spacing: 0.01em;
+}
+
+/* Pastikan tidak ada warna hitam yang bocor dari elemen global */
+.badge span {
+  color: #ffffff;
+}
+
+.b .bottomBar {
+  display: flex;
+  flex-direction: row;
+  /* Memastikan kesamping */
+  align-items: center;
+  justify-content: space-between;
+  /* Menjauhkan kiri (clients) dan kanan (badges) */
+  width: 100%;
+  margin-top: auto;
+  padding: 40px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* --- Responsive Breakpoints --- */
@@ -203,18 +234,14 @@
 
   .bottomBar {
     flex-direction: column;
+    /* Hanya berubah ke bawah di layar kecil agar tidak sesak */
     align-items: flex-start;
-    padding-bottom: 2.5rem;
-    gap: 1.5rem;
+    gap: 24px;
   }
 
   .badges {
-    width: 100%;
-    overflow-x: auto;
-    /* Scrollable badges on mobile if too many */
-    padding-bottom: 5px;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    flex-wrap: wrap;
+    /* Supaya badge membungkus rapi di HP */
   }
 
   .badges::-webkit-scrollbar {
