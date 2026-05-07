@@ -1,0 +1,65 @@
+.about {
+  padding: 120px 48px;
+  background: var(--white);
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.scrollText {
+  font-size: clamp(1.6rem, 3.5vw, 2.75rem);
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+}
+
+.word {
+  color: #c8c8be;
+  transition: color 0.3s ease;
+  display: inline;
+}
+
+.word.active {
+  color: var(--black);
+}
+
+.word.green.active {
+  color: var(--green);
+}
+
+.pill {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 6px;
+  border-radius: 999px;
+  overflow: hidden;
+  width: 100px;
+  height: 50px;
+  position: relative;
+  top: -2px;
+}
+
+.pill img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 80px 20px;
+  }
+
+  .scrollText {
+    font-size: clamp(1.3rem, 5vw, 1.8rem);
+  }
+
+  .pill {
+    width: 44px;
+    height: 28px;
+  }
+}
